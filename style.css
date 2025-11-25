@@ -2,6 +2,7 @@
 	--social-size: 30px;
 	--bg: #fbf7f2;
 	--secondary: #fff9f2;
+	--input-color: #fffcf9;
 	--secondaryText: #757575;
 }
 
@@ -269,6 +270,7 @@ body {
 .select-box {
 	width: 160px;
 	padding: 10px;
+	background-color: var(--input-color);
 	border: none;
 	box-shadow: 0px 0px 2.5px var(--secondaryText);
 	border-radius: 15px;
@@ -279,13 +281,13 @@ body {
 	width: 100%;
 	border: none;
 	outline: none;
-	background-color: var(--secondary);
+	background-color: transparent;
 	font-size: 14px;
 
 }
 
 option {
-	background-color: var(--secondary);
+	background-color: var(--input-color);
 }
 
 .search-btn {
@@ -477,6 +479,7 @@ option {
     z-index: 9998;
 }
 
+
 .formWrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -484,26 +487,30 @@ option {
 	justify-content: center;
 }
 
-#addForm input {
+#formSection input {
 	border: none;
-	background-color: var(--bg);
+	background-color: var(--input-color);
 	width: fit-content;
 	box-shadow: 0px 0px 2.5px var(--secondaryText);
 	padding: 10px;
 	border-radius: 10px;
 }
 
-#addForm textarea {
+#formSection textarea {
 	min-width: 490px;
 	min-height: 150px;
 	box-shadow: 0px 0px 2.5px var(--secondaryText);
 }
 
-#growth {
-	background-color: transparent;
-	width: 100%;
-	border: none;
+.formWrapper .select-box{
+	width: 120px;
 }
+
+
+.dropdown option:nth-child(odd) {
+  background: #f6e2ca;
+}
+
 
 .buttons {
 	display: flex;
@@ -513,7 +520,7 @@ option {
 }
 
 .buttons button {
-	padding: 15px 40px;
+	padding: 15px 50px;
 	border: none;
 	box-shadow: 0px 0px 2.5px var(--secondaryText);
 	/* background-color: var(--secondary); */
@@ -558,7 +565,7 @@ option {
 }
 
 .edit-btn {
-	padding: 5px 10px;
+	padding: 15px 30px;
 	border: none;
 	background: orange;
 	cursor: pointer;
