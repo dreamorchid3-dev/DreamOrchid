@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Admin Login</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+	<header class="navbar">
+		<div class="nav-left">
+			<a href="index.html" class="nav-link">Home</a>
+			<a href="#" class="nav-link">Shop</a>
+			<a href="#" class="nav-link">Contact Us</a>
+		</div>
+
+		<div class="nav-logo">
+			<img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
+			<h2 class="logo-text">Dream Orchids</h2>
+		</div>
+
+		<div class="social">
+			<a href="#"><img class="dark" src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+			<a href="#"><img class="dark" src="/assets/mdi_instagram.png" alt="instagram"></a>
+			<a href="#"><img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp"></a>
+			<a href="login.html"><img class="dark" src="/assets/pajamas_settings.png" alt="Settings"></a>
+		</div>
+	</header>
+
+	<div class="login-box">
+		<h2>Admin Login</h2>
+		<input type="text" id="username" placeholder="Username">
+		<input type="password" id="password" placeholder="Password">
+		<button onclick="login()">Login</button>
+		<p id="error-msg"></p>
+	</div>
+
+	<script src="js/login.js"></script>
+</body>
+
+</html>

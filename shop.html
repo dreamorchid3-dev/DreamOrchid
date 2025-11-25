@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Orchids</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="ShopPage">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="#" class="nav-link">Contact Us</a>
+    </div>
+
+    <div class="nav-logo">
+      <img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
+      <h2 class="logo-text">Dream Orchids</h2>
+    </div>
+
+    <div class="social">
+      <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img class="dark" src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+      <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img class="dark"
+          src="/assets/mdi_instagram.png" alt="instagram"></a>
+      <a id="whatsappLink" target="_blank">
+        <img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+      </a>
+      <a href="login.html"><img class="dark" src="/assets/pajamas_settings.png" alt="Settings"></a>
+    </div>
+  </header>
+
+  <!-- SEARCH SECTION -->
+  <div class="main-wrapper">
+    <section class="search-section">
+      <input type="text" class="search-box" placeholder="Search by name">
+
+      <div class="select-box">
+        <select class="dropdown" id="categoryFilter">
+          <option>All</option>
+          <option>Dandrobium</option>
+          <option>Phalaenopsis</option>
+          <option>Cattleya</option>
+        </select>
+      </div>
+
+      <div class="select-box">
+        <select class="dropdown" id="growthFilter">
+          <option>All</option>
+          <option>Seedling</option>
+          <option>Matured</option>
+          <option>Flowering</option>
+        </select>
+      </div>
+
+      <button class="search-btn">
+        <img src="/assets/icon-park-outline_search.png" alt="">
+      </button>
+    </section>
+  </div>
+
+
+  <section class="item-cards">
+
+  </section>
+
+
+  <!-- <script src="js/whatsapp.js"></script> -->
+  <script src="js/render.js"></script>
+
+
+</body>
+
+</html>

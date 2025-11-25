@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<header class="navbar">
+		<div class="nav-left">
+			<a href="index.html" class="nav-link">Home</a>
+			<a href="/shop.html" class="nav-link">Shop</a>
+			<a href="#" class="nav-link">Contact Us</a>
+		</div>
+
+		<div class="nav-logo">
+			<img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
+			<h2 class="logo-text">Dream Orchids</h2>
+		</div>
+
+		<div class="social">
+			<a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img class="dark"
+					src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+			<a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img class="dark"
+					src="/assets/mdi_instagram.png" alt="instagram"></a>
+			<a id="whatsappLink" target="_blank">
+				<img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+			</a>
+		</div>
+	</header>
+
+	<div class="admin-actions">
+		<h2>All Orchids</h2>
+		<button id="addNew" class="add-btn">+ Add New</button>
+	</div>
+
+
+	<!-- ADD / EDIT FORM -->
+	 <div id="overlay"></div>
+	<form id="formSection" style="display:none;"> 
+		<h3 id="formTitle">Add New Orchid</h3>
+		<div class="formWrapper">
+
+			<input type="text" id="name" placeholder="Plant Name" required><br>
+			<textarea id="desc" placeholder="Description" required></textarea><br>
+			<input type="number" id="price" placeholder="Price" required><br>
+
+			
+			<input type="file" id="profileImage" accept="image/*" required />
+
+			<input type="file" id="image1" accept="image/*" />
+
+			<input type="file" id="image2" accept="image/*" />
+
+
+			<div class="select-box">
+				<select class="dropdown" id="category">
+					<option>Dandrobium</option>
+					<option>Phalaenopsis</option>
+					<option>Cattleya</option>
+				</select><br>
+			</div>
+			<div class="select-box">
+				<select class="dropdown" id="availability">
+					<option value="Available">Available</option>
+					<option value="Out of Stock">Out of Stock</option>
+				</select><br>
+			</div>
+		</div>
+		<div class="select-box">
+			<select id="growth">
+				<option>Seedling</option>
+				<option>Matured</option>
+				<option>Blooming</option>
+				<option>Flowering</option>
+			</select><br>
+		</div>
+
+		<div class="buttons">
+			<button class="save" type="submit">Save</button>
+			<button class="cancel" type="button" onclick="hideForm()">Cancel</button>
+		</div>
+		</div>
+		<input type="hidden" id="editIndex">
+	</form>
+
+	<!-- Orchid List Section -->
+	<h2 style="text-align:center;">All Orchids</h2>
+	<div class="item-cards" style="padding:20px;"></div>
+
+	<script src="js/admin.js" defer></script>
+</body>
+
+</html>
