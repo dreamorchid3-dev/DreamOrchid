@@ -1,13 +1,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } 
 from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { firebaseConfig } from "./firebase.js";  // your config file
+import { firebaseConfig } from "./firebase.js";
 
-// Initialize firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-window.login = function () {  // expose to HTML
+window.login = function () {   // EXPOSE FUNCTION GLOBALLY
   const email = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
@@ -21,6 +20,5 @@ window.login = function () {  // expose to HTML
       console.error(error);
     });
 
-    console.log("Login button clicked");
-
-}
+  console.log("Login button clicked");
+};
