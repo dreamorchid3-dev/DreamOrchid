@@ -1,26 +1,20 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } 
-from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { firebaseConfig } from "./firebase.js";
+// login.js  (MUST be first line)
+import { auth } from "./firebase.js";  
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+// Attach login() to button
+document.querySelector("button").addEventListener("click", login);
 
-document.getElementById("loginBtn").addEventListener("click", login);
-
-function login() {   // EXPOSE FUNCTION GLOBALLY
+function login() {
   const email = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      localStorage.setItem("loggedIn", "true");
+      // Redirect to admin page after login
       window.location.href = "admin.html";
     })
     .catch((error) => {
-      document.getElementById("error-msg").innerText = "Invalid Credentials!";
-      console.error(error);
+      document.getElementById("error-msg").innerText = error.message;
     });
-
-  console.log("Login button clicked");
-};
+}
