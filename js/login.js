@@ -6,7 +6,9 @@ import { firebaseConfig } from "./firebase.js";
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-window.login = function () {   // EXPOSE FUNCTION GLOBALLY
+document.getElementById("loginBtn").addEventListener("click", login);
+
+function login() {   // EXPOSE FUNCTION GLOBALLY
   const email = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
