@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="card-content">
               <h2>${escapeHtml(name)}</h2>
               <p class="desc">${escapeHtml(desc)}</p>
-              <p><b>Growth:</b> ${escapeHtml(growth)}</p>
+              <p><b>Stage :</b> ${escapeHtml(growth)}</p>
             </div>
             <div class="card-footer">
               <span class="price">₹${escapeHtml(price)}</span>
@@ -108,3 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "details.html";
   };
 });
+
+
+
+

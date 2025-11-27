@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Orchid Store</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 	  <header class="navbar">
@@ -64,81 +62,35 @@
       </div>
     </nav>
 
-	<div class="admin-actions">
-		<h2>All Orchids</h2>
-		<button id="addNew" class="add-btn">+ Add New</button>
-	</div>
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions about our orchids, feel free to reach out.</p>
 
+    <div class="contact-box">
+      <p><strong>📞 Phone:</strong> +91 9605 514 944</p>
 
-	<!-- ADD / EDIT FORM -->
-	<div id="overlay"></div>
-	<form id="formSection" style="display:none;">
-		<h3 id="formTitle">Add New Orchid</h3>
-		<div class="formWrapper">
+      <div class="social-links">
+        <a href="https://facebook.com/yourpage" target="_blank" class="btn">Facebook</a>
+        <a href="https://instagram.com/yourpage" target="_blank" class="btn">Instagram</a>
+      </div>
+    </div>
+  </section>
 
-			<input type="text" id="name" placeholder="Plant Name" required><br>
-			<input type="number" id="price" placeholder="Price" required><br>
-			<textarea id="desc" placeholder="Description" required></textarea><br>
+  <!-- Feedback Section -->
+  <section class="feedback-section">
+    <h2>Send Your Feedback</h2>
+    <form action="mailto:dreamorchid3@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Feedback" required></textarea>
+      <button type="submit" class="btn">Send Feedback</button>
+    </form>
+  </section>
 
-
-			<input type="file" id="profileImage" accept="image/*" />
-
-			<input type="file" id="image1" accept="image/*" />
-
-			<input type="file" id="image2" accept="image/*" />
-
-
-			<div class="select-box">
-				<select class="dropdown" id="category">
-					<option>Dandrobium</option>
-					<option>Phalaenopsis</option>
-					<option>Cattleya</option>
-				</select><br>
-			</div>
-			<div class="select-box">
-				<select class="dropdown" id="availability">
-					<option value="Available">Available</option>
-					<option value="Out of Stock">Out of Stock</option>
-				</select><br>
-			</div>
-			<div class="select-box">
-				<select class="dropdown" id="growth">
-					<option>Seedling</option>
-					<option>Matured</option>
-					<option>Blooming</option>
-					<option>Flowering</option>
-				</select><br>
-			</div>
-		</div>
-
-		<div class="buttons">
-			<button class="save" type="submit">Save</button>
-			<button class="cancel" type="button" onclick="hideForm()">Cancel</button>
-		</div>
-		<input type="hidden" id="editIndex">
-	</form>
-
-	<!-- Orchid List Section -->
-	<h2 style="text-align:center;">All Orchids</h2>
-	<div class="item-cards" style="padding:20px;"></div>
-	  <footer class="footer">
+  <!-- Footer Section -->
+  <footer class="footer">
     <p>© 2025 Orchid Store | All Rights Reserved</p>
   </footer>
 
-
-  <script>
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    function openMenu() {
-      mobileMenu.classList.add("active");
-    }
-
-    function closeMenu() {
-      mobileMenu.classList.remove("active");
-    }
-  </script>
-  <script src="js/whatsapp.js"></script>
-	<script src="js/admin.js" defer></script>
 </body>
-
 </html>

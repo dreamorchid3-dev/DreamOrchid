@@ -13,41 +13,82 @@
 </head>
 
 <body>
-	<!-- <nav class="homeNav">
-		<div class="logo"></div>
-		<div class="linkWrapper">
-			<div class="links">
-				<a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact">Contact Us</a>
+
+	<div class="allContainer">
+
+		<!-- HERO SECTION -->
+		<section class="hero">
+
+			<div class="blur-box">
+
+				<nav class="homeNav">
+					<div class="logo"></div>
+
+					<div class="linkWrapper" >
+						
+						<div class="links">
+							<a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact.html">Contact Us</a>
+						</div>
+						<div class="socials">
+							<a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img
+									src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+							<a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img
+									src="/assets/mdi_instagram.png" alt="instagram"></a>
+							<a id="whatsappLink" target="_blank">
+								<img src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+							</a>
+							<a href="login.html"><img src="/assets/pajamas_settings.png" alt="Settings"></a>
+
+						</div>
+					</div>
+				</nav>
+				<div class="hero-content">
+
+					<div class="hero-left">
+
+						<img src="/assets/WhatsApp Image 2025-11-01 at 16.15.34_a5088d3a.jpg" alt="Pink Orchid"
+							class="hero-img">
+						<div class="wrapper">
+							<h1>Pink jelly</h1>
+							<p class="sub">Where Nature Blooms in Pink</p>
+							<p class="tagline">
+								Soft, luminous, and rare — the Pink Jelly Orchid captures nature’s
+								elegance in every petal. A gentle bloom that transforms spaces
+								with grace and calm.
+							</p>
+						</div>
+					</div>
+
+					<!-- RIGHT SIDE -->
+					<div class="hero-right">
+						<h1 class="title">DREAM<br> ORCHIDS</h1>
+						<p class="tagline">
+							Discover rare and exotic orchids, hand-nurtured with care.
+							From graceful Phalaenopsis to vibrant Dendrobiums,
+							bring the elegance of nature into your space.
+						</p>
+					</div>
+				</div>
 			</div>
-			<div class="socials">
-				<a href="#"><img src="/assets/ic_outline-facebook.png" alt="facebook"></a>
-				<a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img
-						src="/assets/mdi_instagram.png" alt="instagram"></a>
-				<a id="whatsappLink" target="_blank">
-					<img src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
-				</a>
-				<a href="login.html"><img src="/assets/pajamas_settings.png" alt="Settings"></a>
 
-			</div>
-		</div>
-	</nav> -->
-	<!-- <section class="hero">
-		<div class="foreground"></div>
-	</section> -->
 
-	<!-- HERO SECTION -->
-	<section class="hero">
-
-		<div class="blur-box">
-			<!-- LEFT SIDE -->
-			<nav class="homeNav">
+			<nav id="nav" class="homeNav">
 				<div class="logo"></div>
-				<div class="linkWrapper">
+
+				<div class="hamburger" id="hamburger">
+					<i onclick="openMenu()" class="fa-solid fa-bars"></i>
+				</div>
+
+				<div class="linkWrapper" id="mobileMenu">
+					<div class="closeBtn" onclick="closeMenu()">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
 					<div class="links">
-						<a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact">Contact Us</a>
+						<a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact.html">Contact Us</a>
 					</div>
 					<div class="socials">
-						<a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+						<a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img
+								src="/assets/ic_outline-facebook.png" alt="facebook"></a>
 						<a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img
 								src="/assets/mdi_instagram.png" alt="instagram"></a>
 						<a id="whatsappLink" target="_blank">
@@ -58,71 +99,79 @@
 					</div>
 				</div>
 			</nav>
-			<div class="hero-content">
 
-				<div class="hero-left">
 
-					<img src="/assets/WhatsApp Image 2025-11-01 at 16.15.34_a5088d3a.jpg" alt="Pink Orchid"
-						class="hero-img">
-					<div class="wrapper">
-						<h1>Pink jelly</h1>
-						<p class="sub">Where Nature Blooms in Pink</p>
-						<p class="tagline">
-							Soft, luminous, and rare — the Pink Jelly Orchid captures nature’s
-							elegance in every petal. A gentle bloom that transforms spaces
-							with grace and calm.
-						</p>
-					</div>
-				</div>
-
-				<!-- RIGHT SIDE -->
-				<div class="hero-right">
-					<h1 class="title">DREAM<br> ORCHIDS</h1>
-					<p class="tagline">
+			<div class="hero-right" id="mobileView">
+				<h1 class="title">DREAM ORCHIDS</h1>
+				<div class="wrapper">
+					<p id="tagline" id="right">
 						Discover rare and exotic orchids, hand-nurtured with care.
 						From graceful Phalaenopsis to vibrant Dendrobiums,
 						bring the elegance of nature into your space.
 					</p>
+					<p id="tagline">
+
+						Each plant is grown with precision, ensuring lasting beauty, rich blooms, and effortless
+						maintenance
+						— perfect for homes, offices, and orchid lovers of every level.
+
+					</p>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="premium">
+		<section class="premium">
+		</section>
 
-	</section>
-	<section class="why-us">
-		<h2 class="section-title">Why Choose Us?</h2>
-		<div class="why-container">
+		<section class="why-us">
+			<h2 class="section-title">Why Choose Us?</h2>
+			<div class="why-container">
 
-			<div class="why-card">
-				<i class="fa-solid fa-seedling"></i>
-				<h3>Hand-Nurtured Orchids</h3>
-				<p>Nurtured with patience — never mass-produced, always cared for.</p>
+				<div class="why-card">
+					<i class="fa-solid fa-seedling"></i>
+					<h3>Hand-Nurtured Orchids</h3>
+					<p>Nurtured with patience — never mass-produced, always cared for.</p>
+				</div>
+
+				<div class="why-card">
+					<i class="fa-solid fa-star"></i>
+					<h3>Rare & Exotic Varieties</h3>
+					<p>Discover dusky pinks and fiery reds — orchids found nowhere else.</p>
+				</div>
+
+				<div class="why-card">
+					<i class="fa-solid fa-truck"></i>
+					<h3>Delivered with Care</h3>
+					<p>Temperature-controlled packaging ensures safe delivery to your home.</p>
+				</div>
+
+				<div class="why-card">
+					<i class="fa-solid fa-leaf"></i> <!-- or fa-book-open -->
+					<h3>Expert Guidance</h3>
+					<p>We guide you with care tips so your orchid grows beautifully over time.</p>
+				</div>
+
 			</div>
+		</section>
 
-			<div class="why-card">
-				<i class="fa-solid fa-star"></i>
-				<h3>Rare & Exotic Varieties</h3>
-				<p>Discover dusky pinks and fiery reds — orchids found nowhere else.</p>
-			</div>
-
-			<div class="why-card">
-				<i class="fa-solid fa-truck"></i>
-				<h3>Delivered with Care</h3>
-				<p>Temperature-controlled packaging ensures safe delivery to your home.</p>
-			</div>
-
-			<div class="why-card">
-				<i class="fa-solid fa-leaf"></i> <!-- or fa-book-open -->
-				<h3>Expert Guidance</h3>
-				<p>We guide you with care tips so your orchid grows beautifully over time.</p>
-			</div>
-
-		</div>
-	</section>
+	</div>
+	  <footer class="footer">
+    <p>© 2025 Orchid Store | All Rights Reserved</p>
+  </footer>
 
 
+
+	<script>
+		const mobileMenu = document.getElementById("mobileMenu");
+
+		function openMenu() {
+			mobileMenu.classList.add("active");
+		}
+
+		function closeMenu() {
+			mobileMenu.classList.remove("active");
+		}
+	</script>
 
 	<Script src="js/whatsapp.js"></Script>
 	<script src="js/render.js"></script>

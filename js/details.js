@@ -29,3 +29,13 @@ const bookBtn = document.getElementById("bookBtn");
 if (item.availability === "Out of Stock") {
   bookBtn.disabled = true;
 }
+
+
+
+function popupOverlay() {
+    document.getElementById("popupOverlay").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popupOverlay").style.display = "none";
+}

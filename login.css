@@ -1,0 +1,100 @@
+:root {
+	--social-size: 30px;
+	--bg: #fbf7f2;
+	--secondary: #fff9f2;
+	--input-color: #fffcf9;
+	--secondaryText: #757575;
+}
+
+
+
+/* ===== LOGIN PAGE STYLING ===== */
+
+.login-page {
+	margin: 0;
+	padding: 0;
+	font-family: "lufga", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Center login box */
+.login-box {
+	width: 90%;
+	max-width: 380px;
+	background: var(--bg);
+	margin: 120px auto 40px;
+	padding: 30px;
+	border-radius: 18px;
+	box-shadow: 0 8px 25px var(--secondaryText);
+	text-align: center;
+	animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Title */
+.login-box h2 {
+	margin-bottom: 20px;
+	font-weight: 600;
+	color: #000000;
+}
+
+/* Inputs */
+.login-box input {
+	width: 90%;
+	padding: 12px;
+	margin: 10px 0;
+	border-radius: 10px;
+	border: 1px solid #ffe5c4;
+	background: var(--input-color);
+	font-size: 15px;
+	outline: none;
+	transition: 0.3s;
+}
+
+.login-box input:focus {
+	border-color: #ffe5c4;
+	box-shadow: 0 0 5px #ffe5c4;
+}
+
+/* Login Button */
+.login-box button {
+	width: 100%;
+	padding: 12px;
+	background: #000000;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+	margin-top: 5px;
+	transition: 0.3s;
+}
+
+.login-box button:hover {
+	color: #000000;
+	background: #ffe5c4;
+	border-color: #000000;
+	box-shadow: 0 0 5px #f6c88d;
+}
+
+/* Error message */
+#error-msg {
+	margin-top: 10px;
+	color: red;
+	font-size: 14px;
+}
+
+

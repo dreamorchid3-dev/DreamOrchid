@@ -24,7 +24,7 @@ function loadCards() {
         <div class="card-content">
           <h2>${item.name}</h2>
           <p class="desc">${item.desc}</p>
-          <p><b>Growth:</b> ${item.growth}</p>
+          <p><b>Stage:</b> ${item.growth}</p>
 
           <div class="card-footer">
             <span class="price">$ ${item.price}</span>
@@ -95,7 +95,7 @@ document.getElementById("formSection").addEventListener("submit", function (e) {
       ...imageResults  //  Merge all images
     };
 
-    if (index) orchids[index] = newItem;
+    if (index !== "") orchids[index] = newItem;
     else orchids.push(newItem);
 
     localStorage.setItem("orchids", JSON.stringify(orchids));

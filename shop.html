@@ -12,67 +12,111 @@
 
 <body class="ShopPage">
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-left">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="shop.html" class="nav-link">Shop</a>
-      <a href="#" class="nav-link">Contact Us</a>
-    </div>
+  <div class="allContainer">
 
-    <div class="nav-logo">
-      <img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
-      <h2 class="logo-text">Dream Orchids</h2>
-    </div>
-
-    <div class="social">
-      <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img class="dark" src="/assets/ic_outline-facebook.png" alt="facebook"></a>
-      <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img class="dark"
-          src="/assets/mdi_instagram.png" alt="instagram"></a>
-      <a id="whatsappLink" target="_blank">
-        <img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
-      </a>
-      <a href="login.html"><img class="dark" src="/assets/pajamas_settings.png" alt="Settings"></a>
-    </div>
-  </header>
-
-  <!-- SEARCH SECTION -->
-  <div class="main-wrapper">
-    <section class="search-section">
-      <input type="text" class="search-box" placeholder="Search by name">
-
-      <div class="select-box">
-        <select class="dropdown" id="categoryFilter">
-          <option>All</option>
-          <option>Dandrobium</option>
-          <option>Phalaenopsis</option>
-          <option>Cattleya</option>
-        </select>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
       </div>
 
-      <div class="select-box">
-        <select class="dropdown" id="growthFilter">
-          <option>All</option>
-          <option>Seedling</option>
-          <option>Matured</option>
-          <option>Flowering</option>
-        </select>
+      <div class="nav-logo">
+        <img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
+        <h2 class="logo-text">Dream Orchids</h2>
       </div>
 
-      <button class="search-btn">
-        <img src="/assets/icon-park-outline_search.png" alt="">
-      </button>
+      <div class="social">
+        <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img class="dark"
+            src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img class="dark"
+            src="/assets/mdi_instagram.png" alt="instagram"></a>
+        <a id="whatsappLink" target="_blank">
+          <img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+        </a>
+        <a href="login.html"><img class="dark" src="/assets/pajamas_settings.png" alt="Settings"></a>
+      </div>
+    </header>
+
+
+    <nav id="nav" class="homeNav">
+      <div class="logo"></div>
+
+      <div class="hamburger dark" id="hamburger">
+        <i onclick="openMenu()" class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="linkWrapper" id="mobileMenu">
+        <div class="closeBtn" onclick="closeMenu()">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="links">
+          <a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact.html">Contact Us</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img
+              src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+          <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img src="/assets/mdi_instagram.png"
+              alt="instagram"></a>
+          <a id="whatsappLink" target="_blank">
+            <img src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+          </a>
+          <a href="login.html"><img src="/assets/pajamas_settings.png" alt="Settings"></a>
+
+        </div>
+      </div>
+    </nav>
+    <!-- SEARCH SECTION -->
+    <div class="main-wrapper">
+      <section class="search-section">
+        <input type="text" class="search-box" placeholder="Search by name">
+
+        <div class="select-box">
+          <select class="dropdown" id="categoryFilter">
+            <option>Category</option>
+            <option>Dandrobium</option>
+            <option>Phalaenopsis</option>
+            <option>Cattleya</option>
+          </select>
+        </div>
+
+        <div class="select-box">
+          <select class="dropdown" id="growthFilter">
+            <option>Stage</option>
+            <option>Seedling</option>
+            <option>Matured</option>
+            <option>Blooming</option>
+          </select>
+        </div>
+
+      </section>
+    </div>
+
+
+    <section class="item-cards">
+
     </section>
+
   </div>
+  <footer class="footer">
+    <p>© 2025 Orchid Store | All Rights Reserved</p>
+  </footer>
 
 
-  <section class="item-cards">
+  <script>
+    const mobileMenu = document.getElementById("mobileMenu");
 
-  </section>
+    function openMenu() {
+      mobileMenu.classList.add("active");
+    }
 
-
-  <!-- <script src="js/whatsapp.js"></script> -->
+    function closeMenu() {
+      mobileMenu.classList.remove("active");
+    }
+  </script>
   <script src="js/render.js"></script>
+  <script src="js/whatsapp.js"></script>
 
 
 </body>

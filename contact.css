@@ -1,0 +1,80 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: lufga, sans-serif;
+  background: beige;
+  color: #333;
+  padding: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-box {
+  margin-top: 20px;
+  padding: 20px;
+  display: inline-block;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 18px;
+  text-decoration: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.feedback-section {
+  margin-top: 50px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.feedback-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback-section input,
+.feedback-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.footer {
+  background: beige;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}

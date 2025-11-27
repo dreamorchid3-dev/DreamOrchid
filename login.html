@@ -4,9 +4,39 @@
 <head>
 	<title>Admin Login</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="login-page">
+
+	<nav id="nav" class="homeNav">
+		<div class="logo"></div>
+
+		<div class="hamburger dark" id="hamburger">
+			<i onclick="openMenu()" class="fa-solid fa-bars"></i>
+		</div>
+
+		<div class="linkWrapper" id="mobileMenu">
+			<div class="closeBtn" onclick="closeMenu()">
+				<i class="fa-solid fa-xmark"></i>
+			</div>
+			<div class="links">
+				<a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact.html">Contact Us</a>
+			</div>
+			<div class="socials">
+				<a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img
+						src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+				<a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img
+						src="/assets/mdi_instagram.png" alt="instagram"></a>
+				<a id="whatsappLink" target="_blank">
+					<img src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+				</a>
+				<a href="login.html"><img src="/assets/pajamas_settings.png" alt="Settings"></a>
+
+			</div>
+		</div>
+	</nav>
 
 	<header class="navbar">
 		<div class="nav-left">
@@ -36,6 +66,19 @@
 		<p id="error-msg"></p>
 	</div>
 
+
+	<script>
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    function openMenu() {
+      mobileMenu.classList.add("active");
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove("active");
+    }
+  </script>
+  <script src="js/whatsapp.js"></script>
 	<script src="js/login.js"></script>
 </body>
 
