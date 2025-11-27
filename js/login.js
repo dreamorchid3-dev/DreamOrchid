@@ -1,12 +1,18 @@
-function login() {
-  let user = document.getElementById("username").value;
-  let pass = document.getElementById("password").value;
+import { getAuth, signInWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
-  // Hardcoded (you can change anytime)
-  if (user === "admin" && pass === "orchid123") {
-    localStorage.setItem("loggedIn", "true");   // store login
-    window.location.href = "admin.html";
-  } else {
-    document.getElementById("error-msg").innerText = "Invalid Credentials!";
-  }
+const auth = getAuth();
+
+function login() {
+  const email = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "admin.html";  
+    })
+    .catch(() => {
+      document.getElementById("error-msg").innerText = "Invalid Credentials!";
+    });
 }
