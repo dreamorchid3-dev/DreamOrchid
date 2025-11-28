@@ -1,6 +1,22 @@
-console.log("admin.js loaded");
+
 import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
+import { db, storage } from "./firebase.js";
+import {
+  collection,
+  getDocs,
+  doc,
+  setDoc,
+  deleteDoc,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+
 
 onAuthStateChanged(auth, (user) => {
   if (!user) window.location.href = "login.html";
@@ -12,15 +28,6 @@ const addBtn = document.getElementById("addNew");
 const title = document.getElementById("formTitle");
 const editIndex = document.getElementById("editIndex");
 
-import { db, storage } from "./firebase.js";
-import {
-  collection,
-  getDocs,
-  doc,
-  setDoc,
-  deleteDoc,
-  getDoc,
-} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 async function loadCards() {
   container.innerHTML = "";
@@ -58,11 +65,6 @@ async function loadCards() {
 }
 loadCards();
 
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
 
 async function saveOrchid(id = null) {
   // Read form data
@@ -184,3 +186,6 @@ document.getElementById("saveBtn").addEventListener("click", () => {
   const id = editIndex.value || null;
   saveOrchid(id);
 });
+
+
+console.log("admin.js loaded");
