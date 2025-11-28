@@ -13,7 +13,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBk8YXSSpjnymtW-htoatifwLedbSR_QO4",
   authDomain: "dream-orchids.firebaseapp.com",
   projectId: "dream-orchids",
-  storageBucket: "dream-orchids.firebasestorage.app",
+  storageBucket: "dream-orchids.appspot.com",
   messagingSenderId: "456700803608",
   appId: "1:456700803608:web:c965f645bebfe08f5e216d",
   measurementId: "G-S4QFF8GGT0",
@@ -28,3 +28,4 @@ const storage = getStorage(app);
 const auth = getAuth(app);
 
 export { db, storage, auth };
+console.log("Firebase connected successfully!");

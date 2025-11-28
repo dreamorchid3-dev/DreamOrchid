@@ -1,4 +1,5 @@
 // login.js  (MUST be first line)
+console.log("login.js is loaded!");
 import { auth } from "./firebase.js";  
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
