@@ -2,126 +2,140 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+	<link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6X4WD7WKN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-X6X4WD7WKN', {
+      cookie_domain: 'dream-orchids.web.app'   // use your hosting domain
+    });
+  </script>
+
 </head>
 
 <body>
 
-	  <header class="navbar">
-      <div class="nav-left">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link">Shop</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
-      </div>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </div>
 
-      <div class="nav-logo">
-        <img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
-        <h2 class="logo-text">Dream Orchids</h2>
-      </div>
+    <div class="nav-logo">
+      <img src="/assets/orchidLogo.png" alt="Logo" class="logo-img">
+      <h2 class="logo-text">Dream Orchids</h2>
+    </div>
 
-      <div class="social" >
-        <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img class="dark"
+    <div class="social">
+      <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img class="dark"
+          src="/assets/ic_outline-facebook.png" alt="facebook"></a>
+      <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img class="dark"
+          src="/assets/mdi_instagram.png" alt="instagram"></a>
+      <a id="whatsappLink" target="_blank">
+        <img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+      </a>
+      <a href="login.html"><img class="dark" src="/assets/pajamas_settings.png" alt="Settings"></a>
+    </div>
+  </header>
+
+
+  <nav id="nav" class="homeNav">
+    <div class="logo"></div>
+
+    <div class="hamburger dark" id="hamburger">
+      <i onclick="openMenu()" class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="linkWrapper" id="mobileMenu">
+      <div class="closeBtn" onclick="closeMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="links">
+        <a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact.html">Contact Us</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img
             src="/assets/ic_outline-facebook.png" alt="facebook"></a>
-        <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img class="dark"
-            src="/assets/mdi_instagram.png" alt="instagram"></a>
+        <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img src="/assets/mdi_instagram.png"
+            alt="instagram"></a>
         <a id="whatsappLink" target="_blank">
-          <img class="dark" src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
+          <img src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
         </a>
-        <a href="login.html"><img class="dark" src="/assets/pajamas_settings.png" alt="Settings"></a>
+        <a href="login.html"><img src="/assets/pajamas_settings.png" alt="Settings"></a>
+
       </div>
-    </header>
+    </div>
+  </nav>
+
+  <div class="admin-actions">
+    <h2>All Orchids</h2>
+    <button id="addNew" class="add-btn">+ Add New</button>
+  </div>
 
 
-    <nav id="nav" class="homeNav">
-      <div class="logo"></div>
+  <!-- ADD / EDIT FORM -->
+  <div id="overlay"></div>
+  <form id="formSection" style="display:none;">
+    <h3 id="formTitle">Add New Orchid</h3>
+    <div class="formWrapper">
 
-      <div class="hamburger dark" id="hamburger">
-        <i onclick="openMenu()" class="fa-solid fa-bars"></i>
+      <input type="text" id="name" placeholder="Plant Name" required><br>
+      <input type="number" id="price" placeholder="Price" required><br>
+      <textarea id="desc" placeholder="Description" required></textarea><br>
+
+
+      <input type="file" id="profileImage" accept="image/*" />
+
+      <input type="file" id="image1" accept="image/*" />
+
+      <input type="file" id="image2" accept="image/*" />
+
+
+      <div class="select-box">
+        <select class="dropdown" id="category">
+          <option>Dandrobium</option>
+          <option>Phalaenopsis</option>
+          <option>Cattleya</option>
+        </select><br>
       </div>
-
-      <div class="linkWrapper" id="mobileMenu">
-        <div class="closeBtn" onclick="closeMenu()">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="links">
-          <a href="/index.html">Home</a><a href="/shop.html">Shop</a><a href="/contact.html">Contact Us</a>
-        </div>
-        <div class="socials">
-          <a href="https://www.facebook.com/divyesh.chandran?mibextid=rS40aB7S9Ucbxw6v"><img
-              src="/assets/ic_outline-facebook.png" alt="facebook"></a>
-          <a href="https://www.instagram.com/divyeshchandran?igsh=cnVmdHhpemJ5bXlx"><img src="/assets/mdi_instagram.png"
-              alt="instagram"></a>
-          <a id="whatsappLink" target="_blank">
-            <img src="/assets/ic_baseline-whatsapp.png" alt="whatsapp">
-          </a>
-          <a href="login.html"><img src="/assets/pajamas_settings.png" alt="Settings"></a>
-
-        </div>
+      <div class="select-box">
+        <select class="dropdown" id="availability">
+          <option value="Available">Available</option>
+          <option value="Out of Stock">Out of Stock</option>
+        </select><br>
       </div>
-    </nav>
+      <div class="select-box">
+        <select class="dropdown" id="growth">
+          <option>Seedling</option>
+          <option>Matured</option>
+          <option>Blooming</option>
+          <option>Flowering</option>
+        </select><br>
+      </div>
+    </div>
 
-	<div class="admin-actions">
-		<h2>All Orchids</h2>
-		<button id="addNew" class="add-btn">+ Add New</button>
-	</div>
+    <div class="buttons">
+      <button id="saveBtn" class="save" type="button">Save</button>
+      <button class="cancel" type="button" onclick="hideForm()">Cancel</button>
+    </div>
+    <input type="hidden" id="editIndex">
+  </form>
 
-
-	<!-- ADD / EDIT FORM -->
-	<div id="overlay"></div>
-	<form id="formSection" style="display:none;">
-		<h3 id="formTitle">Add New Orchid</h3>
-		<div class="formWrapper">
-
-			<input type="text" id="name" placeholder="Plant Name" required><br>
-			<input type="number" id="price" placeholder="Price" required><br>
-			<textarea id="desc" placeholder="Description" required></textarea><br>
-
-
-			<input type="file" id="profileImage" accept="image/*" />
-
-			<input type="file" id="image1" accept="image/*" />
-
-			<input type="file" id="image2" accept="image/*" />
-
-
-			<div class="select-box">
-				<select class="dropdown" id="category">
-					<option>Dandrobium</option>
-					<option>Phalaenopsis</option>
-					<option>Cattleya</option>
-				</select><br>
-			</div>
-			<div class="select-box">
-				<select class="dropdown" id="availability">
-					<option value="Available">Available</option>
-					<option value="Out of Stock">Out of Stock</option>
-				</select><br>
-			</div>
-			<div class="select-box">
-				<select class="dropdown" id="growth">
-					<option>Seedling</option>
-					<option>Matured</option>
-					<option>Blooming</option>
-					<option>Flowering</option>
-				</select><br>
-			</div>
-		</div>
-
-		<div class="buttons">
-			<button id="saveBtn" class="save" type="button">Save</button>
-			<button class="cancel" type="button" onclick="hideForm()">Cancel</button>
-		</div>
-		<input type="hidden" id="editIndex">
-	</form>
-
-	<!-- Orchid List Section -->
-	<h2 style="text-align:center;">All Orchids</h2>
-	<div class="item-cards" style="padding:20px;"></div>
-	  <footer class="footer">
+  <!-- Orchid List Section -->
+  <h2 style="text-align:center;">All Orchids</h2>
+  <div class="item-cards" style="padding:20px;"></div>
+  <footer class="footer">
     <p>© 2025 Orchid Store | All Rights Reserved</p>
   </footer>
 
@@ -137,9 +151,9 @@
       mobileMenu.classList.remove("active");
     }
   </script>
-	<script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/firebase.js"></script>
   <script src="js/whatsapp.js"></script>
-	<script src="js/admin.js" defer></script>
+  <script src="js/admin.js" defer></script>
 </body>
 
 </html>
