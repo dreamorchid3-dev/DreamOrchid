@@ -1,3 +1,4 @@
+console.log("admin.js loaded");
 import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
@@ -121,6 +122,7 @@ async function saveOrchid(id = null) {
 
 // Open Form
 addBtn.addEventListener("click", () => {
+  console.log("Add New clicked");
   formSection.style.display = "block";
   title.innerText = "Add Orchid";
   editIndex.value = "";
